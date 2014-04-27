@@ -1,37 +1,3 @@
-# This README.md describes the process followed to create the dataset HAR_tidy.data.txt from the raw UCA HAS Dataset.zip and contains a copy of the script run_analysis.R used to create the dataset HAR_tidy.data.txt from the raw UCA HAS Dataset.zip
-
-# Process followed to produce the tidy dataset
-
-summary of the Human Activity Recognition Using Smartphones Data Set by dataset (test data/train data),
-by activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and 
-by subject (1:30)
-
-This script uses the Human Activity Recognition Using Smartphones Data Set 
-downloaded from : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-the script assumes the data zip file has been downloaded and unzipped and the folder 
-and file names have not been changed
-
-the script assumes the working directory has been set to: ~/UCI HAR Dataset and is provided in the README.md and run_analysis.R files in this repository 
-
-1.  import test dataset
-2.  add the activity codes and subjects to the test dataset
-3.  import training dataset
-4.  add the activity codes and subjects to the training data
-5.  import features dataset and include columns for activity codes and subjects
-6.  import activities dataset
-7.  assign column headers to test and training data tables
-8.  add a new column to test and train data identifying the dataset
-9.  merge the test and training datasets
-10. identify column names for mean() and std() and create a vector of column names to select from the original data, including dataset_id, activity_codes and subjects columns
-11. create a subset of the mean and std data from the merged dataset
-12. name activity codes and convert them to a factor
-13. convert subjects to a factor
-14. calculate the average of each variable for each activity and each subject
-15. create a file called HAR_tidy_data.txt containing the tidy dataset in the UCI HAR Dataset folder
-
-
-# This is a copy of the script file run_analysis.R contained in the repository
-
 ## summary of the Human Activity Recognition Using Smartphones Data Set by dataset (test data/train data),
 ## by activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and 
 ## by subject (1:30)
